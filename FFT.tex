@@ -1,0 +1,77 @@
+\section{沸騰音と蒸気泡挙動周波数}
+
+Figure \ref{Spectrogram}へ各定常点における\SI{20}{~s}沸騰音のスペクトログラムを示す．
+図中(1)-(12)は，Fig. \ref{bc}の各定常点に対応している．
+
+Figre \ref{Spectrogram}では，熱量増えると(1)-(6)
+核沸騰域では500Hzへ向けて周波数帯が狭くなる．
+MEB遷移後(7)-(9)では同様の傾向を示し，(10)-(13)では，
+\SI{300}{~Hz}から\SI{400}{~Hz}の間に基本周波数が現れ，熱量が大きくなるにつれて
+周波数及び音圧が大きくなる．
+
+ここで，Fig. \ref{Spectrogram_trans}へ(6)-(7)の間のMEBへ遷移する前後\SI{10}{~s}の
+スペクトログラムを示す．
+これより，MEB遷移によって沸騰音圧の上昇と複数の周波数が観測された．
+
+沸騰音周波数の解析については後述する．
+
+\begin{figure}[btp]
+    \begin{tabular}{cc}
+      \begin{minipage}[b]{0.45\hsize}
+        \centering
+        \includegraphics[width=\textwidth]{./fig4/STFT_label.png}
+        \caption{Spectrogram $\Delta T_{\mathrm{sub}}~=~40~\mathrm{K}$}
+        \label{Spectrogram}
+      \end{minipage} &
+      \begin{minipage}[b]{0.45\hsize}
+        \centering
+        \includegraphics[width=\textwidth]{./fig5/STFT_MEB_1.png}
+        \caption{Spectrogram $\Delta T_{\mathrm{sub}}~=~40~\mathrm{K}$}
+        \label{Spectrogram_trans}
+      \end{minipage}
+    \end{tabular}
+  \end{figure}
+
+さらに，Fig. \ref{Reslice}へ蒸気泡挙動の時間変化を示す．
+Fig. \ref{Reslice}(a)は伝熱面近傍の側面連続写真を伝熱面直上から
+\SI{1}{~mm}の直線に対応する輝度値を時間毎に積み下げたグラフである．
+図はFig. \ref{bc}の定常点(5)に対応し，遷移過程の定常点である，
+図の縦軸は時間に対応し\SI{0.1}{~s}である．
+これを伝熱面中心から\SI{0}{~mm}，\SI{4}{~mm}の直線上の輝度値を
+Fig. \ref{Reslice}(b)へ示す．
+
+Fig. \ref{FFT_2}へこの輝度値のデータと沸騰音のデータをフーリエ変換(FFTのグラフって何と言えば良いでしょうか？)を示す．
+図中(5),(6),(7),(8),(13)はFig. \ref{bc}に対応し，
+順にCHF前，遷移過程，MEB遷移直後，最も高い熱流束となる定常点である．
+沸騰音を(a)，Fig. \ref{Reslice}の方法における\SI{0}{~mm}を(b),
+\SI{4}{~mm}を(c)へ示す．
+
+ここで，(5),(6)では，蒸気泡挙動からのデータでは
+|Hz\SI{30}{~Hz}においてピークが出ているが，
+沸騰音のデータでは，ピークの観測はできるがが，
+|Hz\SI{30}{~Hz}において最大のピークが観測された．
+この理由については後述する蒸気泡挙動の観察結果とともに検討する．
+
+また，(7)においても同様に，蒸気泡挙動からのデータでは
+|Hz\SI{30}{~Hz}においてピークが出ているが，
+沸騰音のデータでは，ピークを観測できない．
+
+(13)では，|Hz\SI{300}{~Hz}において
+蒸気泡挙動のデータ及び沸騰音のデータでピークが一致した．
+これから，MEBが十分にMEB遷移前，遷移直後では，沸騰音と蒸気泡の挙動の評価は難しい．
+
+
+
+\begin{figure}[btp]
+  \centering
+  \includegraphics[width=\textwidth]{./fig6/Reslice-1.pdf}
+  \caption{Vapor bubble behavior $\Delta T_{\mathrm{sub}}~=~40~\mathrm{K}$}
+  \label{Reslice}
+\end{figure}
+
+\begin{figure}[btp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{./fig7/FFT_2.pdf}
+  \caption{Fourie transform $\Delta T_{\mathrm{sub}}~=~40~\mathrm{K}$}
+  \label{FFT_2}
+\end{figure}

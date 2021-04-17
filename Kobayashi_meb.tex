@@ -1,0 +1,181 @@
+% =============================================================================
+% preamble
+% =============================================================================
+\documentclass[a4paper, 12pt, fleqn]{jarticle}
+
+\setlength{\mathindent}{2zw}
+
+\setcounter{secnumdepth}{3}
+% ==============================================================================
+%% Numbered
+ \bibliographystyle{model1-num-names}
+
+ \bibliographystyle{elsarticle-num}
+%% Numbered without titles
+% \bibliographystyle{model1a-num-names}
+
+%% Harvard
+% \bibliographystyle{model2-names.bst}\biboptions{authoryear}
+
+%% Vancouver numbered
+% \usepackage{numcompress}\bibliographystyle{model3-num-names}
+
+%% Vancouver name/year
+%\usepackage{numcompress}\bibliographystyle{model4-names}\biboptions{authoryear}
+
+
+%% APA style
+%\bibliographystyle{model5-names}\biboptions{authoryear}
+
+%% AMA style
+%\usepackage{numcompress}\bibliographystyle{model6-num-names}
+
+%% `Elsevier LaTeX' style
+% \bibliographystyle{elsarticle-num}
+% ==============================================================================
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{fancyhdr}
+\usepackage{subcaption}
+\usepackage[multi]{otf}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{here}
+\usepackage[top=15truemm,bottom=15truemm,left=15truemm,right=15truemm]{geometry}
+\usepackage[hypertex]{hyperref}
+\usepackage{booktabs,url}
+\usepackage[version=3]{mhchem}
+\usepackage{cases}
+\usepackage{siunitx}
+\usepackage{natbib}
+\usepackage{caption}
+\usepackage{longtable}
+\usepackage{setspace}
+\usepackage{lastpage}
+\usepackage{siunitx}
+
+% line numbers
+\usepackage{lineno}
+% \newcommand*\patchAmsMathEnvironmentForLineno[1]{
+%   \expandafter\let\csname old#1\expandafter\endcsname\csname #1\endcsname
+%   \expandafter\let\csname oldend#1\expandafter\endcsname\csname end#1\endcsname
+%   \renewenvironment{#1}
+%      {\linenomath\csname old#1\endcsname}
+%      {\csname oldend#1\endcsname\endlinenomath}}
+% \newcommand*\patchBothAmsMathEnvironmentsForLineno[1]{
+%   \patchAmsMathEnvironmentForLineno{#1}
+%   \patchAmsMathEnvironmentForLineno{#1*}}
+% \AtBeginDocument{
+% \patchBothAmsMathEnvironmentsForLineno{equation}
+% \patchBothAmsMathEnvironmentsForLineno{align}
+% \patchBothAmsMathEnvironmentsForLineno{flalign}
+% \patchBothAmsMathEnvironmentsForLineno{alignat}
+% \patchBothAmsMathEnvironmentsForLineno{gather}
+% \patchBothAmsMathEnvironmentsForLineno{multline}
+% }
+\linenumbers
+
+% \captionsetup[figure]{labelsep=space}
+% \captionsetup[table]{labelsep=space}
+
+%\pagestyle{myheadings}
+
+% \captionsetup[subfigure]{labelformat=simple}
+\renewcommand{\thesubfigure}{(\alph{subfigure})}
+
+\pagestyle{fancy}
+
+\renewcommand{\figurename}{Fig.}
+\renewcommand{\tablename}{Table}
+%\renewcommand{\bibname}{参考文献}
+
+\lhead{2021/03/22|Kobayashi|MEB}
+\rhead{\pdfcreationdate}
+\cfoot{}
+\rfoot{\thepage / \pageref{LastPage}}
+
+
+\renewcommand{\headrulewidth}{0.0pt}
+
+\makeatletter
+\def\@biblabel#1{}
+\makeatother
+%\lhead[]{\rightmark}
+%[\leftmark]
+
+%\setlength{\oddsidemargin}{0cm}
+%\setlength{\evensidemargin}{0cm}
+%\setlength{\textwidth}{42zw}
+% =============================================================================
+
+\begin{document}
+
+
+% =============================================================================
+% title
+% =============================================================================
+
+% \begin{titlepage}
+%   \begin{center}
+%     \vspace*{5 mm}
+%     \vspace*{8\baselineskip}
+%     2019年度卒業論文 \\
+%     \vspace{2\baselineskip}
+%     {\LARGE 気泡微細化沸騰における蒸気泡挙動と沸騰音の相関}\\
+%     \vspace{9\baselineskip}
+%     %\vspace{220pt}
+%     2020年2月\\
+%     \vspace{2\baselineskip}
+%     東京理科大学理工学部機械工学科\\
+%     \vspace{1\baselineskip}
+%     上野研究室\\
+%     \vspace{3\baselineskip}
+%     7516057　　小林　穂高\\
+%
+%     %\thispagestyle{fancy}
+%   \end{center}
+% \end{titlepage}
+% ============================================================================
+%
+% \addtocontents{toc}{\protect\thispagestyle{empty}}
+
+
+% contents
+% \tableofcontents
+% \clearpage
+% \pagenumbering{roman}
+% \input{SecS}
+% \clearpage
+% \pagenumbering{arabic}
+% % main chapter
+% \setcounter{page}{1}
+\setstretch{3}
+
+%
+\input{apparatus}
+\newpage
+\input{boiling_curve}
+\newpage
+\input{FFT}
+\newpage
+\input{vapor_bubble}
+\setstretch{0.5}
+%\input{fig3}
+
+% \appendix%
+%
+% \newpage
+% acknowledgement_reference
+%\input{Ack}
+%\pagestyle{fancy}
+% \bibliographystyle{TUS_Graduation_thesis_kobayashi}
+%
+%\bibliographystyle{ieeetr}
+% %\bibliographystyle{jsmehori}
+%\section*{References}
+% \bibliographystyle{achicago}
+\newpage
+\bibliography{Collection_Kobayashi_2021_0226}
+%\addcontentsline{toc}{chapter}{参考文献}
+% \input{App1}
+% \input{App2}z
+
+\end{document}

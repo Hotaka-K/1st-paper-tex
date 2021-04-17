@@ -1,0 +1,79 @@
+\section{実験装置及び条件}
+Fig. \ref{apparatus}に実験装置の概略を示す．
+作動流体である蒸留水で満たした試験容器下部に，銅製の伝熱ブロックを設置した．
+伝熱ブロックは上部を，直径\SI{10}{~mm}の円柱形状，
+下部を四角柱形状に加工されており，
+その上端の円形断面を沸騰伝熱面として用いた．
+実験毎に伝熱面を$\# 500$の紙やすり(平均粒子径 \SI{30.2}{~\mu m})で研磨し，アセトンで洗浄した．
+また，伝熱面温度を測定するために，伝熱面中心軸上に沿って，
+伝熱面からそれぞれ$1,~3,~5,~\mathrm{mm}$の位置にK型シース熱電対
+(Nippon NetsuDenki SeisakuSho Co., Japan)を挿入した．
+熱電対の測定誤差は\SI{\pm0.5}{~K}以下である．
+伝熱ブロックは，伝熱ブロック下部に挿入された$8$つのカードリッジヒータ(直径\SI{8}{~mm}，長さ\SI{60}{~mm}, $110~\mathrm{V}-200\mathrm{W}$)によって加熱した．
+また，伝熱ブロックは伝熱面を除いて，
+円形部側面をMIOLEX製(PGX-595, Ryoden-Kasei Co., Ltd., Japan)断熱材,
+四角柱部側面及び下端面をLUMIBOARD\texttrademark{}製(L-14Z, NICHIAS Corporation., Japan)断熱材で覆い,伝熱面以外からの放熱を抑制した．
+
+試験容器は厚さ$10~\mathrm{mm}$ステンレス板で構成され，
+内側の縦幅$300~\mathrm{mm}$，横幅$290~\mathrm{mm}$,深さ$300~\mathrm{mm}$である.
+また，上部は大気に解放されている．
+蒸気泡の観察のため，容器の全ての側面に可視化窓を設けてある．
+試験流体の温度$T_\infty$
+は，試験容器内の伝熱面中心から$5~\mathrm{mm}$，
+直上$20~\mathrm{mm}$の位置に設置されたK型シース熱電対を測定した．
+また，恒温槽へ接続したクーリングチャネルやU字ヒーターを用いて制御した．
+さらに，沸騰音の測定時はアクリロニトリルで覆った，
+マイクロフォン(ECM-CG60, Sony Corporation, Japan)を試験容器内の
+伝熱面中心から$10~\mathrm{mm}$直上$20~\mathrm{mm}$の位置に挿入し，測定した．
+
+実験方法は，沸騰音の測定を除き，前報\cite{Horiuchi2021}と同様の手順に測定をした．
+まず，実験に先立ち，試験流体を3時間以上加熱することによって，
+試験流体の脱気や容器の予加熱を行った．
+予加熱の手順は，伝熱ブロックの加熱とU字型ヒーターを用いた．
+その後，試験流体のサブクール度
+$\Delta{}T_{\mathrm{sub}}~:=~T_{\infty}-T_{\mathrm{sat}}$を
+$40~\mathrm{K}$となる様に調整し，実験を開始した．
+沸騰実験では，カードリッジヒータへの印加電圧を段階的に増加させて，
+擬熱流束，伝熱面温度を測定をした．
+ここで，伝熱面温度は，一次元温度分布を仮定し，
+\cite{Ando2016}と同様に熱流束をFourier's law へ適用させることで評価した．
+\begin{eqnarray}
+  q &=& -\lambda{}\left.\dfrac{\partial T}{\partial x}\right|_{x~=~0}
+  = -\lambda{}
+  \left\{
+    \left(
+      \sum_{i~=~1}^N (x_i - \overline{x})(T_i - \overline{T})
+    \right)
+    /
+    \left(
+      \sum_{i~=~1}^N (x_i - \overline{x})^2
+    \right)
+  \right\}
+\end{eqnarray}
+ここで，$\lambda$は試験ブロックの熱伝導率，
+$x$は試験ブロックにおける伝熱面上部から中心軸に沿った距離，
+添字$i$は熱電対の挿入された位置
+($x_1~=~1~\mathrm{mm}$, $x_2~=~3~\mathrm{mm}$ and $x_3~=~5~\mathrm{mm}$)，
+$N$は測定点の合計(本実験では$N~=~3$)であり，
+$\overline{x}$及び$\overline{T}$は測定位置と測定温度の平均を示す．
+また，熱流束$q$の発達にかかわらず，
+$q$を算出する際は擬熱流束\cite{Ando2016}とした．
+また，印加電圧が一定となってから十分時間が経過した定常状態において，
+蒸気泡挙動の観測と沸騰音の測定を行った．
+蒸気泡挙動の測定は高速度カメラ(FASTCAM APX-RS, Photron Ltd., Japan)を用い，
+後方からの照射によって$10,000$ frame par second (fps)で撮影した．
+また，沸騰音は$60~\mathrm{s}$以上録音した．
+
+\section{Validation}
+(準備中20210226)
+
+\begin{figure}[bp]
+  \centering
+  \includegraphics[width=0.5\textwidth]{./fig1/Experimental_apparatus.pdf}
+  \caption{Experimental apparatus. (Not in scale.)(表面形状の写真を加える)}
+  \label{apparatus}
+\end{figure}
+% ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+% English
+
+% ============================================================================

@@ -1,0 +1,40 @@
+\section{蒸気泡挙動の時間変化}
+Fig. \ref{vapor_bubble}へ蒸気泡挙動の時間変化を示す．
+各図はFig. \ref{Reslice}と同様の方法によって得た．
+図中(5)-(13)はFig. \ref{bc}に対応している．
+(5)は核沸騰域，(6)は遷移域，(7)-(13)はMEB遷移後である．
+(5)-(6)では，大きな合体気泡の通過が確認される．
+(6)では前述Fig. \ref{FFT_2}沸騰音の最大となるピークについて
+蒸気泡と蒸気泡の間がピークとなる\SI{400}{~Hz}に対応しており，
+蒸気泡の剪断の際の音であると考える．
+
+また．MEB遷移後(7)-(9)では蒸気泡の停滞と蒸気泡が左右交互に分布していることがわかる．
+一方で，(10)-(13)では，停滞が見られず，蒸気泡が一様に振動している様子がわかる．
+これは，前述のFig. \ref{bc}沸騰曲線においてMEB遷移後に傾きの変化と一致しており，
+蒸気泡の停滞が観測される領域では沸騰曲線の傾きは負となると考察する．
+
+ここで，MEB遷移後の蒸気泡挙動の左右のズレを定量的に評価するために
+次式\eqref{eq-lags}によって，
+Fig. \ref{Reslice}の手法から得た輝度値データ($r~=~\pm 4~\mathrm{mm}$)
+の相互相関によって得た遅れを($r~=~0~\mathrm{mm}$)
+の自己相関によって得た基本周期で正規化した．
+\begin{eqnarray}
+  L_{n} &=&\dfrac{\mod(\mod(t_1,t_f),~t_f/2)}{t_f}
+  \label{eq-lags}
+\end{eqnarray}
+ここで，$t_1$は相互相関の時間の絶対値の小さいピークの時間換算，
+$t_f$は自己相関の基本周期を示す．
+
+\begin{figure}[btp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{./fig8/Reslice_tot_1.pdf}
+  \caption{Vapor bubble behavior $\Delta T_{\mathrm{sub}}~=~40~\mathrm{K}$}
+  \label{vapor_bubble}
+\end{figure}
+
+\begin{figure}[btp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{./fig9/lags.pdf}
+  \caption{lags $\Delta T_{\mathrm{sub}}~=~40~\mathrm{K}$}
+  \label{lags}
+\end{figure}
